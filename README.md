@@ -1,6 +1,10 @@
 # Illustrator AI version 8 Exporter
 
-Exporting AI version 8 from Illustrator is a slow, laborious process&mdash;this script fixes that. The script doesn't waste your time with GUI or settings you'll never use. You just run the script, select a location to export and you have your AIs. We love the concept behind [Generator](http://blogs.adobe.com/photoshopdotcom/2013/09/introducing-adobe-generator-for-photoshop-cc.html) and this script takes a strong cue from it. The script exports any layer, group or path named with the `.AIv8` extension.
+Exporting AI version 8 from Illustrator is a slow, laborious process&mdash;this script fixes that. The script doesn't waste your time with GUI or settings you'll never use. You just run the script, select a location to export and you have your AIs. The script exports any layer, group or path named with the `.AIv8` extension.
+
+## Credit
+
+This script was forked from [Illustrator SVG Exporter](https://github.com/iconic/illustrator-svg-exporter) and uses the same conventions. 
 
 ## Installation
 
