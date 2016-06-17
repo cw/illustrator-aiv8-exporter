@@ -1,6 +1,6 @@
 # Illustrator AI version 8 Exporter
 
-Exporting AI version 8 from Illustrator is a slow, laborious process&mdash;this script fixes that. The script doesn't waste your time with GUI or settings you'll never use. You just run the script, select a location to export and you have your AIs. We love the concept behind [Generator](http://blogs.adobe.com/photoshopdotcom/2013/09/introducing-adobe-generator-for-photoshop-cc.html) and this script takes a strong cue from it. The script exports any layer, group or path named with the `.AIv8` extension. We use this script to export all our icons for [Open Iconic](https://github.com/iconic/open-iconic).
+Exporting AI version 8 from Illustrator is a slow, laborious process&mdash;this script fixes that. The script doesn't waste your time with GUI or settings you'll never use. You just run the script, select a location to export and you have your AIs. We love the concept behind [Generator](http://blogs.adobe.com/photoshopdotcom/2013/09/introducing-adobe-generator-for-photoshop-cc.html) and this script takes a strong cue from it. The script exports any layer, group or path named with the `.AIv8` extension.
 
 ## Installation
 
@@ -19,7 +19,7 @@ Once you run the script, you'll be prompted to select a location to save the AI 
 
 ## Document Setup
 
-The script doesn't force any setup or organization on you. You can export layers, groups, compound paths or individual paths. Just name the path/layer/group/compound path what you want the file name to be (e.g., my-cool-vector-drawing.svg) and the script will prep it for export. You can export nested layers (example: export indiviual assets as well all assets in a parent layer). The exported SVGs will be cropped to the bounding box of the path/group/layer.
+The script doesn't force any setup or organization on you. You can export layers, groups, compound paths or individual paths. Just name the path/layer/group/compound path what you want the file name to be (e.g., my-cool-vector-drawing.AIv8) and the script will prep it for export. You can export nested layers (example: export indiviual assets as well all assets in a parent layer). The exported AIs will be cropped to the bounding box of the path/group/layer.
 
 You can name artboards with a `.AIv8` extension to export AIs to specific dimensions other than the paths' bounding box. All paths within the artboard will be exported, so make sure to clean up any unwanted paths before export.
 
