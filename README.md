@@ -1,6 +1,6 @@
 # Illustrator AI version 8 Exporter
 
-Exporting AI version 8 from Illustrator is a slow, laborious process&mdash;this script fixes that. The script doesn't waste your time with GUI or settings you'll never use. You just run the script, select a location to export and you have your AIs. The script exports any layer, group or path named with the `.AIv8` extension.
+Exporting AI version 8 from Illustrator is a slow, laborious process&mdash;this script fixes that. The script doesn't waste your time with GUI or settings you'll never use. You just run the script and it exports any layer, group or path named with the `.AIv8` extension into the same directory as the active document.
 
 ## Credit
 
@@ -18,8 +18,6 @@ Note: Make sure to restart Illustrator if you installed the script while the App
 ## Running the Script
 
 Once the script is installed, you'll be able to run it by going to `File > Scripts > AIv8 Exporter`. As mentioned, you don't need to install the script. If you want to run it as a one-off, select `File > Scripts > Other Script...` and select the `AIv8 Exporter.jsx` file in the file chooser.
-
-Once you run the script, you'll be prompted to select a location to save the AI files. After a location is set, you're done&mdash;the script does the rest.
 
 ## Document Setup
 
