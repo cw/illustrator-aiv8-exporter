@@ -70,7 +70,6 @@ function main() {
 
   for ( var i = 0, len = itemsToExport.length; i < len; i++ ) {
 
-
     item = itemsToExport[i];
 
     if ( item.typename === 'Artboard' ) {
@@ -204,7 +203,7 @@ function exportLayer(layer) {
 
     if(item.name) {
       itemName = item.name;
-      if(itemName.split('.').pop() === 'svg') {
+      if(itemName.split('.').pop() === 'AIv8') {
         itemName = itemName.slice(0, -4);
       }
       itemName = itemName.replace(/[^\w\s]|_/g, " ").replace(/\s+/g, "-").toLowerCase()
@@ -268,7 +267,7 @@ function getNamedItems(doc) {
 
   for ( var i = 0, len = doc.artboards.length; i < len; i++ ) {
     item = doc.artboards[i];
-    if ( item.name.split('.').pop() === 'svg' ) {
+    if ( item.name.split('.').pop() === 'AIv8' ) {
       items.push(item);
     }
   }
@@ -280,7 +279,7 @@ function getNamedItems(doc) {
   for ( i = 0, len = doclayers.length; i < len; i++ ) {
     item = doclayers[i];
 
-    if ( item.name.split('.').pop() === 'svg' && !item.locked && !anyParentLocked(item) ) {
+    if ( item.name.split('.').pop() === 'AIv8' && !item.locked && !anyParentLocked(item) ) {
       items.push(item);
     }
   }
@@ -289,7 +288,7 @@ function getNamedItems(doc) {
   for ( i = 0, len = doc.pageItems.length; i < len; i++ ) {
     item =  doc.pageItems[i];
 
-    if ( item.name.split('.').pop() === 'svg' && !item.locked && !anyParentLocked(item) ) {
+    if ( item.name.split('.').pop() === 'AIv8' && !item.locked && !anyParentLocked(item) ) {
       items.push(item);
     }
   }
