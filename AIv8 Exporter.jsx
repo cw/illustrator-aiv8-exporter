@@ -47,7 +47,7 @@ try {
 
     itemsToExport = [];
     sourceDoc = app.activeDocument;
-    # set to same folder as active document
+    // set to same folder as active document
     exportFolder =  app.activeDocument.path;
     exportDoc = documents.add(DocumentColorSpace.RGB);
 
