@@ -238,10 +238,7 @@ function exportItem(item) {
 function exportAIv8(doc, name, bounds) {
 
   doc.artboards[0].artboardRect = bounds;
-
   var file = new File( exportFolder.fsName + '/' + name );
-
-  // Save
   app.activeDocument.saveAs( file, SaveOptions_ai() )
 
 }
@@ -250,7 +247,8 @@ function getNamedItems(doc) {
   var item,
       items,
       doclayers,
-      artboards;
+      artboards,
+      matchingStr = 'AIv8';
 
   items = [];
 
@@ -259,7 +257,7 @@ function getNamedItems(doc) {
 
   for ( var i = 0, len = doc.artboards.length; i < len; i++ ) {
     item = doc.artboards[i];
-    if ( item.name.split('.').pop() === 'AIv8' ) {
+    if ( item.name.split('.').pop() === matchingStr ) {
       items.push(item);
     }
   }
@@ -271,7 +269,7 @@ function getNamedItems(doc) {
   for ( i = 0, len = doclayers.length; i < len; i++ ) {
     item = doclayers[i];
 
-    if ( item.name.split('.').pop() === 'AIv8' && !item.locked && !anyParentLocked(item) ) {
+    if ( item.name.split('.').pop() === matchingStr && !item.locked && !anyParentLocked(item) ) {
       items.push(item);
     }
   }
@@ -280,7 +278,7 @@ function getNamedItems(doc) {
   for ( i = 0, len = doc.pageItems.length; i < len; i++ ) {
     item =  doc.pageItems[i];
 
-    if ( item.name.split('.').pop() === 'AIv8' && !item.locked && !anyParentLocked(item) ) {
+    if ( item.name.split('.').pop() === matchingStr && !item.locked && !anyParentLocked(item) ) {
       items.push(item);
     }
   }
