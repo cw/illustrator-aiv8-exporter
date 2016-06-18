@@ -79,7 +79,7 @@ function main() {
 
 }
 
-function SaveOptions_ai() {
+function saveOptionsAI() {
 
     var saveOptions = new IllustratorSaveOptions();
 
@@ -239,7 +239,7 @@ function exportAIv8(doc, name, bounds) {
 
   doc.artboards[0].artboardRect = bounds;
   var file = new File( exportFolder.fsName + '/' + name );
-  app.activeDocument.saveAs( file, SaveOptions_ai() )
+  app.activeDocument.saveAs( file, saveOptionsAI() )
 
 }
 
