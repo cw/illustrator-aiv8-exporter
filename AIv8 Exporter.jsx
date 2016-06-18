@@ -168,9 +168,7 @@ function exportLayer(layer) {
   }
   recurseItems(layer.layers, layerItems);
 
-  if ( !layerItems.length ) {
-    return;
-  }
+  if ( !layerItems.length ) { return; }
 
   name = layer.name;
   prettyName = name.slice(0, -4).replace(/[^\w\s]|_/g, " ").replace(/\s+/g, "-").toLowerCase();
@@ -341,12 +339,8 @@ function anyParentLocked(item) {
  */
 
 function hitTest(a,b){
-  if(!hitTestX(a,b)){
-    return false;
-  }
-  if(!hitTestY(a,b)){
-    return false;
-  }
+  if(!hitTestX(a,b)){ return false; }
+  if(!hitTestY(a,b)){ return false; }
   return true;
 }
 
