@@ -29,7 +29,6 @@ var exportFolder,
     sourceDoc,
     itemsToExport,
     exportDoc,
-    svgOptions,
     overwrite = true, // boolean
     // Accepted values:
     // 8, 9, 10, 11 (cs), 12 (cs2), 13 (cs3), 14 (cs4), 15 (cs5), 16 (cs6), 17 (cc)
@@ -38,12 +37,6 @@ var exportFolder,
 
 try {
   if ( app.documents.length > 0 ) {
-    svgOptions = new ExportOptionsSVG();
-    svgOptions.embedRasterImages = false;
-    svgOptions.cssProperties = SVGCSSPropertyLocation.PRESENTATIONATTRIBUTES;
-    svgOptions.fontSubsetting = SVGFontSubsetting.None;
-    svgOptions.documentEncoding = SVGDocumentEncoding.UTF8;
-    svgOptions.coordinatePrecision = 4;
 
     itemsToExport = [];
     sourceDoc = app.activeDocument;
@@ -151,7 +144,7 @@ function exportArtboard(artboard) {
   }
 
   exportDoc.layers[0].name = prettyName;
-  exportSVG( exportDoc, name, bbox.visibleBounds, svgOptions );
+  exportAIv8( exportDoc, name, bbox.visibleBounds );
 
   sourceDoc.pageItems.getByName('__ILSVGEX__BOUNDING_BOX').remove();
 }
@@ -224,7 +217,7 @@ function exportLayer(layer) {
   }
 
   exportDoc.layers[0].name = name.slice(0, -4);
-  exportSVG( exportDoc, name, [startX, startY, endX, endY], svgOptions );
+  exportAIv8( exportDoc, name, [startX, startY, endX, endY] );
 }
 
 function exportItem(item) {
@@ -239,15 +232,14 @@ function exportItem(item) {
   app.activeDocument = exportDoc;
 
   exportDoc.layers[0].name = ' ';
-  exportSVG( exportDoc, name, item.visibleBounds, svgOptions );
+  exportAIv8( exportDoc, name, item.visibleBounds );
 }
 
-function exportSVG(doc, name, bounds, exportOptions) {
+function exportAIv8(doc, name, bounds) {
 
   doc.artboards[0].artboardRect = bounds;
 
   var file = new File( exportFolder.fsName + '/' + name );
-  //doc.exportFile( file, ExportType.SVG, exportOptions );
 
   // Save
   app.activeDocument.saveAs( file, SaveOptions_ai() )
