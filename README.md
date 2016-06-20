@@ -23,6 +23,10 @@ Once the script is installed, you'll be able to run it by going to `File > Scrip
 
 The script doesn't force any setup or organization on you. You can export layers, groups, compound paths or individual paths. Just name the path/layer/group/compound path what you want the file name to be (e.g., my-cool-vector-drawing.AIv8) and the script will prep it for export. You can export nested layers (example: export indiviual assets as well all assets in a parent layer). The exported AIs will be cropped to the bounding box of the path/group/layer.
 
-You can name artboards with an `.AIv8` extension to export AIs to specific dimensions other than the paths' bounding box. All paths within the artboard will be exported, so make sure to clean up any unwanted paths before export. Please note, exporting an artboard can take a long time if a large number of objects exist within the artboard.
+You can name artboards with an `.AIv8` extension to export AIs to specific dimensions other than the paths' bounding box. All paths within the artboard will be exported, so make sure to clean up any unwanted paths before export. 
 
 If you previously named an element for export but now don't want to export for some reason, simply lock it to keep it from being exported.
+
+## Notable items
+1. Exporting an artboard can take a long time if a large number of objects exist within the artboard.
+2. The export order is artboard, layer, item. If duplicate names exist between an artboard and layer, the last one exported overwrites previous exports.
