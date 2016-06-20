@@ -137,6 +137,7 @@ function exportArtboard(artboard) {
     item = exportDoc.pageItems[i];
 
     /*
+     * TODO this is slow for documents with lots of reference geometry
      * For the moment, all pageItems are made visible and exported
      * unless they are locked. This may not make sense, but it'll
      * work for now.
