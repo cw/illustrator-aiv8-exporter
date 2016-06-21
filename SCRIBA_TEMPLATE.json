@@ -125,7 +125,7 @@
   "Flip Y=No",
   "Start Angle=0.000 degrees",
   "Tiles=[None]",
-  "%(motion_steps)s" ]
+  "%(motion_steps)s" ],
 "part": [
   "[2]",
   "Name=part",
@@ -196,7 +196,7 @@
   "Flip X=No",
   "Flip Y=No",
   "Start Angle=0.000 degrees",
-  "Tiles=[None]" ]
+  "Tiles=[None]" ],
 "motion_step": [
   "[%(block_id)s]",
   "Name=Motion XYZ Absolute%(block_id)s",
@@ -219,7 +219,7 @@
   "Aperture=2.0 mm",
   "Zoom Beam Expander=4.0",
   "Laser Pulse Width=4 - Longest",
-  "Laser Parameter Recipe=--Custom--" ]
+  "Laser Parameter Recipe=--Custom--" ],
 "logo_step": [
   "[%(block_id)s]",
   "Name=%(block_name)s",
