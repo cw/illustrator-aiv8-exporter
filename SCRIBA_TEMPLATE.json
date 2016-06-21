@@ -1,5 +1,5 @@
-templates = {
-"base":
+{
+"base": [
   "[Preferences]",
   "Units=Imperial",
   "Serialisation Rollover=No",
@@ -125,9 +125,9 @@ templates = {
   "Flip Y=No",
   "Start Angle=0.000 degrees",
   "Tiles=[None]",
-  "%(motion_steps)s",
-"part": 
-"[2]",
+  "%(motion_steps)s" ]
+"part": [
+  "[2]",
   "Name=part",
   "Type=Logo",
   "Enable Send=Yes",
@@ -196,9 +196,9 @@ templates = {
   "Flip X=No",
   "Flip Y=No",
   "Start Angle=0.000 degrees",
-  "Tiles=[None]",
-"motion_step": 
-"[%(block_id)s]",
+  "Tiles=[None]" ]
+"motion_step": [
+  "[%(block_id)s]",
   "Name=Motion XYZ Absolute%(block_id)s",
   "Type=Motion XYZ Absolute",
   "Enable Send=Yes",
@@ -219,8 +219,8 @@ templates = {
   "Aperture=2.0 mm",
   "Zoom Beam Expander=4.0",
   "Laser Pulse Width=4 - Longest",
-  "Laser Parameter Recipe=--Custom--",
-"logo_step": 
+  "Laser Parameter Recipe=--Custom--" ]
+"logo_step": [
   "[%(block_id)s]",
   "Name=%(block_name)s",
   "Type=Logo",
@@ -290,5 +290,5 @@ templates = {
   "Flip X=Yes",
   "Flip Y=Yes",
   "Start Angle=0.000 degrees",
-  "Tiles=[None]"
+  "Tiles=[None]" ]
 }
